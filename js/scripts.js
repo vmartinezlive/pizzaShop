@@ -19,15 +19,17 @@ Contact.prototype.personalInfo = function() {
 }
 
 //business logic for BYO Pizza
-var pizzaSize = { size: "Small", "Medium", "Large"};
-var pizzaSauce = { sauce: "Marina", "Alfredo", "Pesto"};
-var pepperoni = { topping: "pepperoni" price: 1.00};
-var sausage = { topping: "sausage" price: 1.00};
-var bacon = { topping: "bacon" price: 1.00};
-var onion = { topping: "onion" price: .50};
-var mushroom = { topping: "mushroom" price: .50};
-var tomato = { topping: "tomato" price: .50};
-var pizzatopping = { toppings: "Pepperoni", "Sausage", "Bacon", "Onion", "Mushroom", "Tomato"};
+// var pizzaSize = { size: "Small", "Medium", "Large"} ;
+// var pizzaSauce = { sauce: "Marina", "Alfredo", "Pesto"};
+// var pepperoni = { topping: "pepperoni"};
+// var sausage = { topping: "sausage"};
+// var bacon = { topping: "bacon"};
+// var onion = { topping: "onion"};
+// var mushroom = { topping: "mushroom"};
+// var tomato = { topping: "tomato"};
+// var pizzatopping = { toppings: "Pepperoni", "Sausage", "Bacon", "Onion", "Mushroom", "Tomato"};
+
+
 
 
 function Pizza(pizzaSize, pizzaSauce, pizzatopping) {
@@ -36,9 +38,21 @@ function Pizza(pizzaSize, pizzaSauce, pizzatopping) {
   this.pizzatopping = pizzatopping
 }
 
-Pizza.prototype.topping = function(pizzaSize) {
+Pizza.prototype.size = function() {
   for (var i=0; i<this.pizzaSize.length; i++) {
-    if (this.pizzaSize[i].)
+    if (this.pizzaSize[i]=this.pizzaSize)
   }
 
+}
+
+
+
+
+//User Interface
+$(document).ready(function)() {
+  $("#show-result").submit(function(event) {
+    var pizzaSize = parseInt($("input:radio[name=size]:checked").val());
+    var pizzaSauce = parseInt($("input:radio[name=sauce]:checked").val());
+    var pizzaTopping  = parseInt($("input:radio[name=topping]:checked").val());
+  })
 }
