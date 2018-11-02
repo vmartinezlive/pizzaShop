@@ -39,17 +39,31 @@ function Pizza(pizzaSize, pizzaSauce, pizzatopping) {
 }
 
 Pizza.prototype.size = function() {
-  for (var i=0; i<this.pizzaSize.length; i++) {
-    if (this.pizzaSize[i]=this.pizzaSize)
+  for (var i=0; i< this.pizzaSize.length; i++) {
+    if (this.pizzaSize[i] === this.pizzaSize)
+    return;
   }
-
+ return;
 }
 
+Pizza.prototype.sauce = function() {
+  for (var i=0; i< this.pizzaSauce.length; i++) {
+    if (this.pizzaSauce[i] === this.pizzaSauce)
+    return;
+  }
+ return;
+}
 
-
+Pizza.prototype.topping = function() {
+  for (var i=0; i< this.pizzatopping.length; i++) {
+    if (this.pizzatopping[i] === this.pizzatopping)
+    return;
+  }
+ return;
+}
 
 //User Interface
-$(document).ready(function)() {
+$(document).ready(function(){
   $("#show-result").submit(function(event) {
 
     var firstName = $("#first-name").val();
@@ -68,6 +82,9 @@ $(document).ready(function)() {
     var pizzaTopping  = parseInt($("input:radio[name=topping]:checked").val());
     var completePizza = function(pizzaSize, pizzaSauce, pizzaTopping) {
       return pissaSize + pizzaSauce + pizzaTopping;
+
+      $("#show-result").show();
+      $("#show-result").hide();
     }
   })
-}
+})
