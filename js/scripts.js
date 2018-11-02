@@ -51,8 +51,23 @@ Pizza.prototype.size = function() {
 //User Interface
 $(document).ready(function)() {
   $("#show-result").submit(function(event) {
+
+    var firstName = $("#first-name").val();
+    var lastName = $("#last-name").val();
+    var phoneNumber = $("#phone-number").val();
+    var physicalAddress = $("#physical-address").val();
+
+    $(".first-name").text(firstNam);
+    $(".last-name").text(lastName);
+    $(".physical-address").text(physicalAddress);
+    $(".phone-number").text(phoneNumber);
+
+
     var pizzaSize = parseInt($("input:radio[name=size]:checked").val());
     var pizzaSauce = parseInt($("input:radio[name=sauce]:checked").val());
     var pizzaTopping  = parseInt($("input:radio[name=topping]:checked").val());
+    var completePizza = function(pizzaSize, pizzaSauce, pizzaTopping) {
+      return pissaSize + pizzaSauce + pizzaTopping;
+    }
   })
 }
