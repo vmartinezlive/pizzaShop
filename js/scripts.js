@@ -36,4 +36,9 @@ function Pizza(pizzaSize, pizzaSauce, pizzatopping) {
   this.pizzatopping = pizzatopping
 }
 
-Pizza.prototype.topping = function()
+Pizza.prototype.topping = function(pizzaSize) {
+  for (var i=0; i<this.pizzaSize.length; i++) {
+    if (this.pizzaSize[i].)
+  }
+
+}
