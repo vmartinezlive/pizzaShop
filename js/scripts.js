@@ -7,17 +7,19 @@ PizzaOrder.prototype.addContact = function(contact) {
   this.contacts.push(contact);
 }
 
-function Contact(firstName, lastName, phoneNumber) {
+function Contact(firstName, lastName, phoneNumber, address) {
   this.firstName = firstName,
   this.lastName = lastName,
   this.phoneNumber = phoneNumber,
   this.address = address
+
 }
 
 Contact.prototype.personalInfo = function() {
   return this.firstName + " " + this.lastName + "." + " You're address is " + this.address + " and your contact number is " + this.phoneNumber;
+
 }
- var pizzatoppins = ["Pepperoni", "Sausage", "Bacon", "Onion", "Mushroom", "Tomato"];
+ var pizzatoppings = ["Pepperoni", "Sausage", "Bacon", "Onion", "Mushroom", "Tomato"];
 
 //business logic for BYO Pizza
 function Pizza(pizzaSize, pizzaSauce, pizzatopping) {
@@ -54,7 +56,13 @@ Pizza.prototype.getPizzaOrderTotal = function() {
   return this.pizzaSize + this.pizzaSauce + this.pizzaTopping;
 }
 
+
+
+
 //User Interface
+
+var pizzaOrder = new PizzaOrder();
+
 $(document).ready(function(){
   $("#pizza-order").submit(function(event) {
     event.preventDefault();
@@ -64,9 +72,11 @@ $(document).ready(function(){
     var lastName = $("#last-name").val();
     var phoneNumber = $("#phone-number").val();
     var physicalAddress = $("#physical-address").val();
+    var newContact = new Contact(firstName, lastName, phoneNumber, physicalAddress);
+    var pizzaOrder = newContact.personalInfo();
+    debugger;
 
-
-    $("#first-name").text(firstNam);
+    $("#first-name").text(firstName);
     $("#last-name").text(lastName);
     $("#physical-address").text(physicalAddress);
     $("#phone-number").text(phoneNumber);
@@ -75,10 +85,11 @@ $(document).ready(function(){
     var pizzaSize = parseInt($("input:radio[name=size]:checked").val());
     var pizzaSauce = parseInt($("input:radio[name=sauce]:checked").val());
     var pizzaTopping  = parseInt($("input:radio[name=topping]:checked").val());
+    var pizza = new Pizza(pizzaSize, pizzaSauce, pizzaTopping)
     var orderTotal = pizza.getPizzaOrderTotal()
 
 
-      $("#show-result").show();
+      $("#show-result").text(pizzaOrder);
       $("#pizzaOrder").text(orderTotal)
 
   });
