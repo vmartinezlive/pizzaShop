@@ -56,7 +56,7 @@ Pizza.prototype.getPizzaOrderTotal = function() {
 
 //User Interface
 $(document).ready(function(){
-  $("#oizza-order").submit(function(event) {
+  $("#pizza-order").submit(function(event) {
     event.preventDefault();
 
 
@@ -75,7 +75,6 @@ $(document).ready(function(){
     var pizzaSize = parseInt($("input:radio[name=size]:checked").val());
     var pizzaSauce = parseInt($("input:radio[name=sauce]:checked").val());
     var pizzaTopping  = parseInt($("input:radio[name=topping]:checked").val());
-    var completePizza = function(pizzaSize, pizzaSauce, pizzaTopping) {
     var orderTotal = pizza.getPizzaOrderTotal()
 
 
