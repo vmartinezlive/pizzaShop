@@ -56,7 +56,7 @@ Pizza.prototype.getPizzaOrderTotal = function() {
 
 //User Interface
 $(document).ready(function(){
-  $("#show-result").submit(function(event) {
+  $("#oizza-order").submit(function(event) {
     event.preventDefault();
 
 
@@ -76,10 +76,11 @@ $(document).ready(function(){
     var pizzaSauce = parseInt($("input:radio[name=sauce]:checked").val());
     var pizzaTopping  = parseInt($("input:radio[name=topping]:checked").val());
     var completePizza = function(pizzaSize, pizzaSauce, pizzaTopping) {
-      return pissaSize + pizzaSauce + pizzaTopping;
+    var orderTotal = pizza.getPizzaOrderTotal()
+
 
       $("#show-result").show();
+      $("#pizzaOrder").text(orderTotal)
 
-    }
   });
 });
