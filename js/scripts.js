@@ -17,25 +17,13 @@ function Contact(firstName, lastName, phoneNumber) {
 Contact.prototype.personalInfo = function() {
   return this.firstName + " " + this.lastName + "." + " You're address is " + this.address + " and your contact number is " + this.phoneNumber;
 }
+ var pizzatoppins = ["Pepperoni", "Sausage", "Bacon", "Onion", "Mushroom", "Tomato"];
 
 //business logic for BYO Pizza
-// var pizzaSize = { size: "Small", "Medium", "Large"} ;
-// var pizzaSauce = { sauce: "Marina", "Alfredo", "Pesto"};
-// var pepperoni = { topping: "pepperoni"};
-// var sausage = { topping: "sausage"};
-// var bacon = { topping: "bacon"};
-// var onion = { topping: "onion"};
-// var mushroom = { topping: "mushroom"};
-// var tomato = { topping: "tomato"};
-// var pizzatopping = { toppings: "Pepperoni", "Sausage", "Bacon", "Onion", "Mushroom", "Tomato"};
-
-
-
-
 function Pizza(pizzaSize, pizzaSauce, pizzatopping) {
   this.pizzaSize = pizzaSize,
   this.pizzaSauce = pizzaSauce,
-  this.pizzatopping = pizzatopping
+  this.pizzaTopping = pizzatopping
 }
 
 Pizza.prototype.size = function() {
@@ -55,26 +43,33 @@ Pizza.prototype.sauce = function() {
 }
 
 Pizza.prototype.topping = function() {
-  for (var i=0; i< this.pizzatopping.length; i++) {
-    if (this.pizzatopping[i] === this.pizzatopping)
-    return;
+  for (var i=0; i< this.pizzatoppings.length; i++) {
+    if (this.pizzatoppings[i] === this.pizzatopping)
+    return 1;
   }
- return;
+ return 0;
+}
+
+Pizza.prototype.getPizzaOrderTotal = function() {
+  return this.pizzaSize + this.pizzaSauce + this.pizzaTopping;
 }
 
 //User Interface
 $(document).ready(function(){
   $("#show-result").submit(function(event) {
+    event.preventDefault();
+
 
     var firstName = $("#first-name").val();
     var lastName = $("#last-name").val();
     var phoneNumber = $("#phone-number").val();
     var physicalAddress = $("#physical-address").val();
 
-    $(".first-name").text(firstNam);
-    $(".last-name").text(lastName);
-    $(".physical-address").text(physicalAddress);
-    $(".phone-number").text(phoneNumber);
+
+    $("#first-name").text(firstNam);
+    $("#last-name").text(lastName);
+    $("#physical-address").text(physicalAddress);
+    $("#phone-number").text(phoneNumber);
 
 
     var pizzaSize = parseInt($("input:radio[name=size]:checked").val());
@@ -84,7 +79,7 @@ $(document).ready(function(){
       return pissaSize + pizzaSauce + pizzaTopping;
 
       $("#show-result").show();
-      $("#show-result").hide();
+
     }
-  })
-})
+  });
+});
