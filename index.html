@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -9,126 +10,122 @@
     <title>pizzaShop</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1>Sergio's Pizzeria</h1>
-    </div>
-    <div class="container">
-      <form ="pizza-order">
-        <div id="inputCustInfo">
-        <h3 id="heading">Customer Information</h3>
+    <h1>Famoso Pizzeria</h1>
+    <h2>Customer Information</h2>
+    <form id="pizza-order">
+      <div id="inputCustInfo">
         <label for="first-name">First Name</label>
         <input type="text" id="first-name">
         <label for="last-name">Last Name</label>
         <input type="text" id="last-name">
+        <br>
         <label for="phone-number">Phone Number</label>
         <input type="text" id="phone-number">
         <label for="physical-address">Home Address</label>
         <input type="text" id="physical-address">
+      </div>
+      <br>
+      <h2>Build Your Own Pizza</h2>
+      <div class="row">
+        <div class="col-sm-2">
+          <h3>Pizza Size</h3>
+          <div class="form-check">
+            <input class="form-check-input" name="size" type="radio" id="radioSmlPizza" value="9">
+            <label class="radioSmlPizza">
+              Small '12
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" name="size" type="radio" id="radioMedPizza" value="14">
+            <label class="radioMedPizza">
+              Medium '16
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" name="size" type="radio" id="radioLrgPizza" value="18">
+            <label class="radioLrgPizza">
+              Large '18
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <h3>Sauce</h3>
+          <div class="form-check">
+            <input class="form-check-input" name="sauce" type="radio" id="sauceRed" value="1">
+            <label class="sauceRed">
+              Marinara Sauce
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" name="sauce" type="radio" id="sauceWhite" value="2">
+            <label class="sauceWhite">
+              Alfredo Sauce
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" name="sauce" type="radio" id="sauceGreen" value="3" checkled>
+            <label class="sauceGreen">
+              Pesto Sauce
+            </label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">
+          <h3>Toppings</h3>
+          <div class="col-md-6">
+            <div class="form-check">
+              <input class="form-check-input" name="topping" type="radio" id="toppingPepperoni" value="1">
+              <label class="toppingPepperoni">
+                Pepperoni
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="topping" type="radio" id="toppingSausage" value="1">
+              <label class="toppingSausage">
+                Sausage
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="topping" type="radio" id="toppingBacon" value="1">
+              <label class="toppingBacon">
+                Bacon
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="topping" type="radio" id="toppingOnion" value="1">
+              <label class="toppingOnion">
+                Onion
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="topping" type="radio" id="toppingMushroom" value="1">
+              <label class="toppingMushroom">
+                Mushroom
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="topping" type="radio" id="toppingTomato" value="1">
+              <label class="toppingTomato">
+                Tomato
+              </label>
+            </div>
+          </div>
         </div>
         <br>
-        <h2>Build Your Own Pizza</h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <h3>Pizza Size</h3>
-            <div class="form-check">
-              <input class="form-check-input" name="size" type="radio" id="radioSmlPizza" value="9">
-              <label class="radioSmlPizza">
-                Small '12
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" name="size" type="radio" id="radioMedPizza" value="14">
-              <label class="radioMedPizza">
-                Medium '16
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" name="size" type="radio" id="radioLrgPizza" value="18">
-              <label class="radioLrgPizza">
-                Large '18
-              </label>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <h3>Sauce</h3>
-            <div class="form-check">
-              <input class="form-check-input" name="sauce" type="radio" id="sauceRed" value="1">
-              <label class="sauceRed">
-                Marinara Sauce
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" name="sauce" type="radio" id="sauceWhite" value="2">
-              <label class="sauceWhite">
-                Alfredo Sauce
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" name="sauce" type="radio" id="sauceGreen" value="3" checkled>
-              <label class="sauceGreen">
-                Pesto Sauce
-              </label>
-            </div>
-          </div>
+        <div class="button">
+          <button type="submit" class="btn btn-danger">Submit Order</button>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <h3>Toppings</h3>
-            <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" name="topping" type="radio" id="toppingPepperoni" value="1">
-                <label class="toppingPepperoni">
-                  Pepperoni
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" name="topping" type="radio" id="toppingSausage" value="1">
-                <label class="toppingSausage">
-                  Sausage
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" name="topping" type="radio" id="toppingBacon" value="1">
-                <label class="toppingBacon">
-                  Bacon
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" name="topping" type="radio" id="toppingOnion" value="1">
-                <label class="toppingOnion">
-                  Onion
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" name="topping" type="radio" id="toppingMushroom" value="1">
-                <label class="toppingMushroom">
-                  Mushroom
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" name="topping" type="radio" id="toppingTomato" value="1">
-                <label class="toppingTomato">
-                  Tomato
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="button">
-          <button type="submit" class="btn btn-info">Submit Order</button>
-        </div>
-        <button
-          <br>
       </form>
       <br>
       <br>
-      <div class="row">
-        <div id="#show-result">
-          <h2>Order Confirmation:</h2>
-          <p><span class="first-name"></span><span class="last-name"></span> , and your address is <span class="physical-address"></span> with contact number of <span class="phone-number".></span></p>
-            <br>
-            <p>You've order total is: $ <span id="pizzaOrder"></span></p>
-          </div>
-        </div>
+      <div id="show-result">
+        <h2>Order Confirmation:</h2>
+        <p><span class="first-name"></span><span class="last-name"></span> , and your address is <span class="physical-address"></span> with contact number of <span class="phone-number".></span></p>
+        <br>
+        <p>You've order total is: $ <span id="pizzaOrder"></span></p>
+      </div>
     </div>
-  <body>
+  </body>
 </html>

@@ -1,28 +1,64 @@
 #show-result {
   display: none;
-}
-body {
-  background-image: url(../img/border.jpg);
-  background-size: cover;
-}
-.container {
-  background-color: green;
+  width: 45%;
+  border-radius: 4px;
+  margin-top: 0;
+  margin-left: 5px;
+  padding: 5px;
+  background-color: #f8f8f8;
+  border: 1px;
+  opacity: 0.75;
 }
 
-#heading {
-  text-align: center;
-  margin-top: 10px;
+body {
+  background-image: url(https://www.straight.com/files/v3/styles/gs_large/public/images/16/05/famoso_pizza.jpg?itok=LUgj2oYh);
+  background-size: cover;
 }
 
 #inputCustInfo {
   margin-top: 100px;
 }
-.jumbotron  {
+
+h1 {
   background-image: url(../img/jumbotron.jpg);
-  background-size: cover;
-  font-family: 'Fugaz One', cursive;
+  font-family: 'Kalam', cursive;
+  font-size: 150px;
   text-align: center;
-
-
-
+  padding: 0px;
+  margin: 0px;
 }
+
+h2 {
+  width: 25%;
+  margin-left: 3px;
+  color: red;
+}
+
+h3 {
+  color: red;
+}
+#inputCustInfo {
+ width: 45%;
+ border-radius: 4px;
+ margin-top: 0;
+ margin-left: 5px;
+ padding: 5px;
+ background-color: #f8f8f8;
+ border: 1px;
+ opacity: 0.75;
+}
+
+.col-sm-2 {
+  width: 10%;
+  border-radius: 4px;
+  margin-top: 0;
+  margin-left: 20px;
+  padding: 5px;
+  background-color: #f8f8f8;
+  border: 1px;
+  opacity: 0.75;
+  }
+
+  .button {
+    margin-left: 10px;
+  }
